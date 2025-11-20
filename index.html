@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuantumPCProcessors.com</title>
+
     <style>
         body {
             background-image: url('https://raw.githubusercontent.com/snoopdoggydoge3/quantumpcprocessors/refs/heads/main/google_willow_chip.jpeg');
             background-size: cover;
             background-position: center center;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
             color: white;
         }
 
+        /* Glowing + Bold Title */
         h1 {
-            animation: neonGlow 2.5s ease-in-out infinite alternate;
-
             font-size: 4rem;
-            color: orange;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+            color: #ffa200;
+            text-shadow:
+                0 0 8px rgba(255, 165, 0, 0.5),
+                0 0 16px rgba(255, 165, 0, 0.4),
+                0 0 24px rgba(255, 165, 0, 0.3);
+            margin-top: 100px;
             font-family: 'Georgia', serif;
-            margin-top: 60px;
         }
 
-        .advert {
-            border: 2px solid rgba(255,165,0,0.8);
-            box-shadow: 0 0 20px rgba(255,165,0,0.6), 0 0 40px rgba(255,165,0,0.4);
-            animation: softPulse 4s infinite ease-in-out;
-
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            margin: 40px auto;
-            width: 80%;
-            border-radius: 10px;
-            font-size: 1.3rem;
-            line-height: 1.6rem;
+        p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
 
         a {
@@ -47,97 +45,71 @@
             border-bottom: 2px solid orange;
             padding-bottom: 3px;
         }
+
         a:hover {
             color: #ff8c00;
             border-bottom: 2px solid #ff8c00;
         }
 
+        /* Contact Button */
         .contact-btn {
+            display: inline-block;
             padding: 10px 20px;
             background: #444;
             color: #fff;
             border-radius: 6px;
             text-decoration: none;
+            margin-top: 30px;
             font-size: 1.2rem;
         }
-            /* Floating particle styles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .particle {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background: rgba(255,165,0,0.8);
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(255,165,0,0.9);
-            animation: floatUp 8s linear infinite;
-        }
-        .particle:nth-child(1) { left: 10%; animation-duration: 9s; }
-        .particle:nth-child(2) { left: 30%; animation-duration: 7s; }
-        .particle:nth-child(3) { left: 50%; animation-duration: 10s; }
-        .particle:nth-child(4) { left: 70%; animation-duration: 8s; }
-        .particle:nth-child(5) { left: 90%; animation-duration: 6s; }
 
-        @keyframes floatUp {
-            0% { top: 110%; opacity: 0; }
-            10% { opacity: 1; }
-            100% { top: -10%; opacity: 0; }
+        /* Contact section styling */
+        #contact {
+            margin-top: 80px;
+            color: orange;
+            text-shadow: 0 0 8px rgba(0,0,0,0.6);
         }
 
-        /* Neon glow animation */
-        @keyframes neonGlow {
-            from { text-shadow: 0 0 10px orange, 0 0 20px #ff8c00, 0 0 30px #ff8c00; }
-            to { text-shadow: 0 0 20px orange, 0 0 30px #ffa500, 0 0 50px #ff8c00; }
+        form {
+            margin-top: 20px;
         }
 
-        /* Soft pulsing glow for advert box */
-        @keyframes softPulse {
-            0% { box-shadow: 0 0 15px rgba(255,165,0,0.3); }
-            50% { box-shadow: 0 0 35px rgba(255,165,0,0.7); }
-            100% { box-shadow: 0 0 15px rgba(255,165,0,0.3); }
-        } {
-            0% { top: 110%; opacity: 0; }
-            10% { opacity: 1; }
-            100% { top: -10%; opacity: 0; }
+        input, textarea {
+            width: 300px;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            margin-top: 10px;
         }
 
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: orange;
+            color: #000;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffcc66;
+        }
     </style>
 </head>
 <body>
 
     <h1>QuantumPCProcessors.com</h1>
 
-    <div class="advert">
-        <h2>Premium Domain Opportunity</h2>
-        <p>
-            Quantum computing is transitioning from research labs to real-world commercial products.
-            As global tech giants race to develop quantum processors and future quantum PCs, the demand
-            for strong, future‑proof digital real estate is rapidly increasing.
-        </p>
-        <p>
-            <strong>QuantumPCProcessors.com</strong> is a rare .com domain perfectly aligned with one of the most important
-            emerging technology markets of the 21st century.
-        </p>
-        <p>
-            • Future‑focused and positioned for the rise of quantum hardware.<br>
-            • Premium keywords: "quantum", "PC", and "processors".<br>
-            • Ideal for startups, chip manufacturers, researchers, or tech investors.<br>
-            • High scarcity value as quantum hardware goes mainstream.
-        </p>
-        <p>
-            <strong>Willing to accept offers.</strong><br>
-            Investor guidance price: <strong>£2,000 – £5,000</strong>
-        </p>
-    </div>
+    <p>
+        This premium domain is now available for acquisition.<br><br>
+        A strategic investment for the upcoming Quantum Computing hardware revolution.<br>
+        Serious enquiries welcome — willing to accept offers.<br><br>
+        **Suggested valuation: £5,000 – £12,500**
+    </p>
 
-    <a href="#contact" class="contact-btn">Contact</a>
+    <a class="contact-btn" href="#contact">Contact</a>
 
     <h2 id="contact">Contact</h2>
 
@@ -156,15 +128,6 @@
 
         <button type="submit">Send</button>
     </form>
-
-    <!-- Floating particle graphics -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
 
 </body>
 </html>
