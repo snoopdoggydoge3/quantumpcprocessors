@@ -128,6 +128,67 @@
 
         <button type="submit">Send</button>
     </form>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const trailCount = 25; // number of swirls
+    const trail = [];
+    const colors = [
+        "#ff4d4d", "#ff944d", "#ffe04d",
+        "#7dff4d", "#4dffe0", "#4d94ff",
+        "#b84dff", "#ff4dd2"
+    ];
+
+    for (let i = 0; i < trailCount; i++) {
+        const dot = document.createElement("div");
+        dot.style.position = "fixed";
+        dot.style.width = "14px";
+        dot.style.height = "14px";
+        dot.style.borderRadius = "50%";
+        dot.style.pointerEvents = "none";
+        dot.style.zIndex = "9999";
+        dot.style.opacity = "0.9";
+        dot.style.background = colors[i % colors.length];
+        dot.style.filter = "blur(3px)";
+        dot.x = 0;
+        dot.y = 0;
+        document.body.appendChild(dot);
+        trail.push(dot);
+    }
+
+    let mouseX = 0, mouseY = 0;
+
+    window.addEventListener("mousemove", e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animate() {
+        let x = mouseX;
+        let y = mouseY;
+
+        trail.forEach((dot, index) => {
+            // Follow the previous position for a swirly flow
+            dot.x += (x - dot.x) * 0.3;
+            dot.y += (y - dot.y) * 0.3;
+
+            const swirl = Math.sin(Date.now() / 250 + index * 2) * 12;
+
+            dot.style.left = dot.x + swirl + "px";
+            dot.style.top = dot.y + swirl + "px";
+
+            // Slight fade the further back the index is
+            dot.style.opacity = 1 - index * 0.03;
+
+            x = dot.x;
+            y = dot.y;
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+});
+</script>
 
 </body>
 </html>
